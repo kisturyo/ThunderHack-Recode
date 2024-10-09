@@ -259,7 +259,6 @@ public class ModuleManager implements IManager {
     public static Aura aura = new Aura();
     public static FOV fov = new FOV();
     public static ESP esp = new ESP();
-    public static RPC rpc = new RPC();
 
     public ModuleManager() {
         for (Field field : getClass().getDeclaredFields()) {
@@ -321,7 +320,6 @@ public class ModuleManager implements IManager {
 
         if (ConfigManager.firstLaunch) {
             ModuleManager.notifications.enable();
-            rpc.enable();
             soundFX.enable();
         }
     }
