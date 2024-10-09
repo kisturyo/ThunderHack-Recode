@@ -100,13 +100,6 @@ public class MainMenuScreen extends Screen {
         context.drawTexture(TextureStorage.donation, mc.getWindow().getScaledWidth() - 79, mc.getWindow().getScaledHeight() - 39, 28, 28, 0, 0, 30, 30, 30, 30);
         RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
 
-        int offsetY = 10;
-        for (String change : ThunderUtility.changeLog) {
-            String prefix = getPrefix(change);
-            FontRenderers.sf_medium.drawString(context.getMatrices(), prefix, 10, offsetY, Render2DEngine.applyOpacity(-1, 0.4f));
-            offsetY += 10;
-        }
-
         int totalAddonsLoaded = Managers.ADDON.getTotalAddons();
         String addonsText = "Addons Loaded: " + totalAddonsLoaded;
         int screenWidth = mc.getWindow().getScaledWidth();
