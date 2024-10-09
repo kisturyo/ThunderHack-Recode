@@ -35,7 +35,7 @@ import static thunder.hack.features.modules.client.ClientSettings.isRu;
 
 public class XRay extends Module {
     public XRay() {
-        super("XRay", Category.MISC);
+        super("XRay", Category.RENDER);
     }
 
     private final Setting<Plugin> plugin = new Setting<>("Plugin", Plugin.New);
