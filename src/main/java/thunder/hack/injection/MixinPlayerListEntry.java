@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import thunder.hack.core.manager.client.ModuleManager;
-import thunder.hack.utility.OptifineCapes;
+import thunder.hack.utility.CapeHandler;
 import thunder.hack.utility.ThunderUtility;
 
 import java.io.BufferedReader;
@@ -70,8 +70,8 @@ public class MixinPlayerListEntry {
                     customCapeTexture = Identifier.of("thunderhack", "textures/capes/starcape.png");
             }
 
-            if (ModuleManager.optifineCapes.isEnabled())
-                OptifineCapes.loadPlayerCape(profile, id -> {
+            if (ModuleManager.capes.isEnabled())
+                CapeHandler.loadPlayerCape(profile, id -> {
                     customCapeTexture = id;
                 });
         });
